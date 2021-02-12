@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>SENGOKU＿WEB</title>
+   <meta http-equiv="content-type" charset="utf-8">
+   <link rel="stylesheet" href="css/page.css">
+   <script src="js/page.js"></script>
+   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  </head>
+<body>
+<model-viewer id ="gyorin" src=3dmodel/glb03/tyouda03.glb alt="gyorin"exposure="1.0" auto-rotate camera-controls>
+
+<div class ="logo">
+    <a href=index.html>
+      <img src="image/logo/yajirushi.png" style="height:1.8em"></img>
+    </a>
+</div>
+<div class="image_style" >
+  <img src="image/title/tyouda.png" style="height:2em"></img>
+</div>
+  <div class = "formation_button"　style="text-align : right">
+
+    <!-- ENGETSU -->
+    <div class = "btn">
+    <a class = "symbol_detail" href=engetsu.html>
+      <img src="image/symbol_cursor/engetsu.png"  alt="ボタン画像1" />
+      <img src="image/symbol_not_cursor/engetsu.png"  alt="ボタン画像2" />
+    </a>
+  </div>
+
+    <!-- HOUSHI -->
+    <div class = "btn">
+      <a class = "symbol_detail" href=houshi.html>
+        <img src="image/symbol_cursor/houshi.png"  alt="ボタン画像１" />
+        <img src="image/symbol_not_cursor/houshi.png"  alt="ボタン画像2" />
+      </a>
+    </div>
+
+    <!-- GYORIN -->
+    <div class = "btn">
+    <a class = "symbol_detail" href=gyorin.html>
+      <img src="image/symbol_cursor/gyorin.png"  alt="ボタン画像1" />
+      <img src="image/symbol_not_cursor/gyorin.png"  alt="ボタン画像2" />
+    </a>
+   </div>
+
+    <!-- TYOUDA-->
+    <div class = "btn">
+      <a class = "symbol_detail" href=tyouda.html>
+        <img src="image/symbol_not_cursor/tyouda.png"  alt="ボタン画像１" />
+        <img src="image/symbol_cursor/tyouda.png"  alt="ボタン画像2" />
+      </a>
+    </div>
+
+    <!-- KOUYAKU -->
+    <div class = "btn">
+    <a class = "symbol_detail" href=kouyaku.html>
+      <img src="image/symbol_cursor/kouyaku.png"  alt="ボタン画像１" />
+      <img src="image/symbol_not_cursor/kouyaku.png"  alt="ボタン画像2" />
+    </a>
+  </div>
+
+    <!-- GANKOU -->
+    <div class = "btn">
+      <a class = "symbol_detail" href=gankou.html>
+        <img src="image/symbol_cursor/gankou.png"  alt="ボタン画像１" />
+        <img src="image/symbol_not_cursor/gankou.png"  alt="ボタン画像2" />
+      </a>
+    </div>
+
+    <!-- KAKUYOKU -->
+    <div class = "btn">
+    <a class = "symbol_detail" href=kakuyoku.html>
+      <img src="image/symbol_cursor/kakuyoku.png"  alt="ボタン画像１" />
+      <img src="image/symbol_not_cursor/kakuyoku.png"  alt="ボタン画像2" />
+    </a>
+   </div>
+
+    <!-- HOUEN-->
+    <div class = "btn">
+      <a class = "symbol_detail" href=houen.html>
+        <img src="image/symbol_cursor/houen.png"  alt="ボタン画像１" />
+        <img src="image/symbol_not_cursor/houen.png"  alt="ボタン画像2" />
+      </a>
+    </div>
+
+  </div>
+
+  <div class="botom_container">
+    <div class = "detail_chart"　class = "box">
+      <canvas id= "zentai" ></canvas>
+    </div>
+      <script>
+          Chart.defaults.global.defaultFontColor = '#E0E0E0';
+          Chart.defaults.scale.gridLines.color = "#666666";
+          Chart.defaults.scale.gridLines.zeroLineColor = "#666666";
+        var ctx = document.getElementById("zentai");
+        var myRadarChart2 = new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ["FrontATK","SideATK","Mobility","Stamina","Flexibility","FrontDEF","SideDEF"],
+              // labels: ["Strong on the front","Strong on the side","Flexibility of movement","Strong in the long run","Defense against surprise","Defense against frontal attacks","Defense against lateral attacks"],
+                datasets: [{
+                    label: 'ENGETSU',
+                    data: [80,20,10,10,10,100,30],
+                    backgroundColor: 'rgba(219, 0, 26,0.5)',
+                    // borderColor: 'rgba(219, 0, 26,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'HOSHI',
+                    data: [100,10,10,0,10,100,10],
+                    backgroundColor: 'rgba(219, 0, 69,0.5)',
+                    // borderColor: 'rgba(219, 0, 69,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'GYORIN',
+                    data: [90,10,70,100,10,70,20],
+                    backgroundColor: 'rgba(219, 0, 132,0.5)',
+                    // borderColor: 'rgba(219, 0, 132,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'CHODA',
+                    data: [70,20,10,10,0,100,10],
+                    backgroundColor: 'rgba(219, 0, 201,0.5)',
+                    // borderColor: 'rgba(219, 0, 201,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'KOYAKU',
+                    data: [40,30,20,70,80,60,50],
+                    backgroundColor: 'RGBA(179, 0, 219,0.5)',
+                    // borderColor: 'rgba(179, 0, 219,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)"
+                },{
+                    label: 'GANKOH',
+                    data: [50,40,10,10,30,80,40],
+                    backgroundColor: 'rgba(121, 0, 219,0.5)',
+                    // borderColor: 'rgba(121, 0, 219,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'KAKUYOKU',
+                    data: [60,100,70,10,10,60,30],
+                    backgroundColor: 'rgba(66, 0, 219,0.5)',
+                    // borderColor: 'rgba(66, 0, 219,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                },{
+                    label: 'HOEN',
+                    data: [30,30,10,80,100,60,60],
+                    backgroundColor: 'rgba(0, 7, 219,0.5)',
+                    // borderColor: 'rgba(0, 7, 219,1.0)',
+                    // pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                }]
+            },
+            options: {
+              responsive: true,
+        maintainAspectRatio: false,
+              legend:{
+                display: true,       // 凡例の設定
+                 position: "right",     // 表示位置
+                 labels: {
+                     // 凡例文字列の設定
+                     fontSize: 12,
+                     fontColor: "white",
+                     padding:16,
+                     borderWidth:0
+                 }
+              },
+              scale:{
+                  pointLabels: {       // 軸のラベル（"国語"など）
+                  fontSize: 8,
+      //             callback: function(val){
+      //   if(val.length > 5){
+      //     return [val.substr(0, 5), val.substr(5)]
+      //   }else{
+      //     return val;
+      //   }
+      // }         // 文字の大きさ
+                  },
+                  angleLines: {
+                  color: '#666666'
+                  },
+                  ticks:{
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        stepSize: 10,
+                        showLabelBackdrop: false,
+                        fontColor: "rgba(0,0,0,0)"
+
+                        },
+                      }
+            }
+        });
+        </script>
+    <div class ="bottom_rigt">
+        <div class="detail_sentence">
+          It is a very powerful formation when breaking through the enemy lines vertically. It cannot cope with attacks from the side, and because the formation is long, it is difficult for troops to communicate with each other. When the enemy is in a position other than the front, it is disadvantageous because attacks are avoided.
+      </div>
+</div>
+</div>
+</model-viewer>
+</body>
+</html>

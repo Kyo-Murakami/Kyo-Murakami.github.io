@@ -1,0 +1,130 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    }
+
+.logo_style{
+  text-align: center;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* 非表示 */
+.is-hide {
+    display: none;
+}
+/* LOADING */
+#loader-bg {
+  background: #ffffff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+#loader {
+  height: 120px;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  position: fixed;
+  top: 50%;
+  width: 120px;
+}
+#loader p {
+    color: #454545;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+}
+#loader p img {
+    display: inline-block;
+}
+
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+top: 0;
+left: 0;
+z-index: 9999;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#player {
+     position: absolute;
+     top:0;
+     width: 110%;
+     height: 110%;
+     background: #FFF;
+     z-index: 9999999999;
+    }
+
+#tytle{
+  text-align: center;
+  font-weight:500;
+  letter-spacing: 0.5em;
+}
+#orverview_container{
+  /* background: green; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#symbol_bg{
+  padding: 2% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+#symbol{
+  text-align: center;
+}
+
+.big_container{
+  width: 20em;
+  height:15em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  /* background: yellow; */
+}
+.n_container{
+  position:relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+}
+
+.container_test{
+  position: relative;
+}
+
+.image_test{
+  position:absolute;
+  top: 0;
+  left:0;
+}
+
+.aa_test{
+  margin-left: 10em;
+}

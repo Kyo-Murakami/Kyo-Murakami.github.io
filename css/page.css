@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body{
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: black;
+}
+
+#tytle{
+  text-align: center;
+  font-weight:400;
+  letter-spacing: 1em;
+}
+.logo{
+  position: absolute;
+	top: 1.8em;
+	left: 1.8em;
+}
+
+
+.image_style img{
+  height:5%;
+  margin-top: 4em;
+}
+
+.image_style{
+  text-align: center;
+}
+
+/* ここからボタンの詳細*/
+.btn {
+	position: relative;
+	width: 80%;
+	height: 10%;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.btn:hover img:nth-of-type(2) {
+	opacity: 0;
+}
+
+
+/* ここから右の詳細*/
+.formation_button{
+  margin-right: 1em;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  width: 5em;
+  height:80%;
+  background: black;
+  float: right;
+  display: flex;
+  flex-direction: column;
+    z-index: 100;
+}
+.btn{
+  text-align:center;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* ここから下の詳細*/
+.bottom_rigt{
+  margin-left: auto;
+    width: 68%;
+    height: 100%;
+    /* background: red; */
+    position: relative;
+    z-index: 1;
+}
+
+.detail_sentence{
+  position:absolute;
+  width: 75%;
+  /* background: blue; */
+  letter-spacing: 0.2em;
+  font-weight:200;
+  top: 50%;
+transform: translateY(-50%);
+-webkit- transform: translateY(-50%);
+margin: auto;
+
+}
+
+.detail_var{
+  width: 30%;
+  height:20%;
+  position:absolute;
+  bottom:0;
+  /* background: grey; */
+}
+
+.detail_chart{
+  bottom:0;
+  width:35%;
+  height:100%;
+  margin-left: 1em;
+  margin-right: 1em;
+  /* background: orange; */
+}
+
+.botom_container{
+  position: absolute;
+  left: 0;
+  width: 90%;
+  height: 30%;
+  bottom: 0em;
+  display: flex;
+  /* background: green; */
+  letter-spacing: 0.2em;
+  z-index: 2;
+}
+
+/* ここから各ページのstyle */
+model-viewer {
+  width: 100vw;
+height: 100vh;
+  background-color: black;
+}
+model-viewer#reveal {
+    --poster-color: transparent;
+}
